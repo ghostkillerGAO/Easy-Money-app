@@ -20,11 +20,28 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+        .mt-4 {
+            margin-top: 20px;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .justify-content-center {
+            justify-content: center;
+        }
+        .gap-3 {
+            gap: 1rem;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center my-4">💰 EasyMoney Dashboard</h1>
+
+        <div class="mt-4 d-flex justify-content-center gap-3 mb-4">
+            <a href="{{ url_for('log_expense') }}" class="btn btn-outline-danger">➕ Log Expense</a>
+            <a href="{{ url_for('log_income') }}" class="btn btn-outline-success">➕ Log Income</a>
+        </div>
 
         <div class="row g-4 mb-4">
             <div class="col-md-3">
@@ -56,11 +73,6 @@
         <div class="card p-4">
             <h5 class="mb-3">Income vs Expense</h5>
             <canvas id="pieChart"></canvas>
-        </div>
-
-        <div class="mt-4 d-flex justify-content-center gap-3">
-            <a href="{{ url_for('log_expense') }}" class="btn btn-outline-danger">➕ Log Expense</a>
-            <a href="{{ url_for('log_income') }}" class="btn btn-outline-success">➕ Log Income</a>
         </div>
     </div>
 
